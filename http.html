@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What is HTTP and HTTPS?</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+
+            <div class="title-text">
+                <p>HTTP: HOW AND WHY</p>
+            </div>
+
+            <div class="navigation">
+
+                <input type="checkbox" class="toggle-menu">
+                <div class="hamburger"></div>
+
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="http.html">HTTP &amp; HTTPS?</a></li>
+                    <li><a href="download.html">DOWNLOAD?</a></li>
+                    <li><a href="request.html">REQUESTS?</a></li>
+                    <li><a href="getandpost.html">GET/POST?</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="wrapper">
+            <div class="main-body">
+                <!-- Image header and overlaid text -->
+                <div class="image-header">
+                    <picture>
+                        <source media="(min-width:1100px)" srcset="images/cropped_https_orange.jpg">
+                        <source media="(min-width:800px)" srcset="images/cropped_https_orange700.jpg">
+                        <img src="images/cropped_https_orange400.jpg">
+                    </picture>
+                    <div class="image-header-text-container">
+                        <h2 class>What is HTTP and HTTPS?</h2>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>The HTTP or Hypertext Transfer Protocol lays the very foundation of the web as we know it, 
+                        enabling billions of users from across the globe access to content to millions of websites. 
+                        Specifically, it is used to load web pages through the use of hypertext links. </p>
+                    <h3>Request-Response</h3>
+                    <p>HTTP(S) is a request-response protocol, meaning that users will send a request to the server which will then provide a response. 
+                        HTTP has many different types of <a href=request.html">requests</a> that can be used to perform specific actions.</p>
+                    <h3>Application layer</h3>
+                    <p>HTTP is an application layer protocol and functions on top of the other layers in the networking protocol stack. 
+                        The HTTP protocol is not responsible for finding a path to and from the destination server, only for making the desired request. 
+                        The to and from is handled by other protocols further down the network stack.</p>
+                    <h3>HTTP vs. HTTPS</h3>
+                    <p>HTTPS adds an extra layer of security to the HTTP protocol. By default, HTTP sends messages in plain text that could 
+                        potentially be intercepted and read by anyone along the path the packet takes. This could enable bad actors to 
+                        easily gain access to sensitive information such as passwords or private communications. HTTPS takes steps to prevent this by 
+                        encrypting the packets using Transport Layer Security (TLS) which replaced Secure Sockets Layer (SSL) as the protocol for 
+                        HTTPS security (although the certificates used are still named SSL certificates).</p>
+                    <p>TLS uses public key cryptography which enables both the client and server to agree on a shared secret key that is used to 
+                        encrypt communications so they are unable to be read by any malicious parties.</p>
+                    <h3>How TLS works:</h3>
+                    <ul>
+                        <li>Client sends an TLS connection request which contains the TLS version the client wants to use.</li>
+                        <li>Server acknowledges the client&apos;s connection request, and provides a valid SSL certificate.</li>
+                        <li>Client verifies the server&apos;s SSL certificate with the SSL authority who issued it.</li>
+                        <li>The client sends a random string of bytes called the “premaster secret" encrypted by the server's public key that it obtained from the SSL certificate.</li>
+                        <li>The server decrypts the premaster secret with its private key.</li>
+                        <li>Both the client and the server generate a shared session key based on the premaster secret.</li>
+                        <li>Both parties exchanged a “finished” message encrypted with the new shared key.</li>
+                        <li>Secure symmetric encryption has been achieved!</li>
+                    </ul>
+                
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
