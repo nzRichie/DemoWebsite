@@ -320,3 +320,24 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+/* Styling for the table on the request.html page */
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #f8f0e3;
+}
+
+tr {
+    border: 2px solid #f8f0e3;
+}
+
+td, th {
+    padding: 5px;
+}
+
+th:nth-child(1) {
+    width: 25%;
+}
