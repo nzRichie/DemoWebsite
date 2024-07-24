@@ -335,9 +335,13 @@ tr {
 }
 
 td, th {
-    padding: 5px;
+    padding: 10px;
 }
 
 th:nth-child(1) {
     width: 25%;
+}
+
+h2 {
+    padding: 20px;
 }
