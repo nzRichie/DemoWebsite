@@ -47,8 +47,12 @@ body {
     display: block;
 }
 
-.title-text p {
+.title-text>h1 {
     font-size: 18px;
+}
+
+.title-text>h1>a {
+    text-decoration: none;
 }
 
 .navigation {
