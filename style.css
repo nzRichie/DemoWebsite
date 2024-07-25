@@ -294,25 +294,6 @@ body {
     transition: 0.5s;
 }
 
-.image-link-odd:hover,
-.image-link-even:hover {
-    filter:grayscale(0%);
-}
-
-.image-link-odd {
-    text-align: left;
-}
-
-.image-link-even {
-    text-align: right;
-}
-
-.image-link-odd picture img,
-.image-link-even picture img {
-    border-radius: 0.5rem;
-    width: 85%;
-    right: 0;
-}
 
 .index-header-text-container {
     padding: 24px;
@@ -348,4 +329,57 @@ th:nth-child(1) {
 
 h2 {
     padding: 20px;
+}
+
+.grid-item-1 {
+    grid-area: item1;
+}
+
+.grid-item-2 {
+    grid-area: item2;
+}
+
+.grid-item-3 {
+    grid-area: item3;
+}
+
+.grid-item-4 {
+    grid-area: item4;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'item1'
+        'item2'
+        'item3'
+        'item4';
+    gap: 10px;
+}
+
+.grid-container > div {
+    padding: 20px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.grid-container>div>a>picture>img {
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 100%;
+    right: 0;
+    position: relative;
+}
+
+.grid-container>div:hover {
+    filter: grayscale(0%);
+    animation: wiggle 2.5s;
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(0deg); }
+    5% {transform: rotate(0deg); }
+    10% {transform: rotate(0.3deg); }
+    15% {transform: rotate(-0.3deg);} 
+    20% {transform: rotate(0deg);}
 }
