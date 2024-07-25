@@ -90,7 +90,38 @@
                         </tr>
                     </table>
                     <h2>What else is in an HTTP header?</h2>
-                    <p>By spite about do of do allow blush. Additions in conveying or collected objection in. Suffer few desire wonder her object hardly nearer. Abroad no chatty others my silent an. Fat way appear denote who wholly narrow gay settle. Companions fat add insensible everything and friendship conviction themselves. Theirs months ten had add narrow own. </p>
+                    <p>The rest of the HTTP header content consists of key, value pairs, the key and the value are separated by a colon while the pairs are separated by a carriage return and a line feed (a new line).</p>
+                    <p>Below are some examples of HTTP header fields and what they're used for.</p>
+                    <table>
+                        <tr>
+                            <th>Host:</th>
+                            <th>The domain name and port number of the server to which the request is being sent. If not port is included then the default port is used. This must be included in all HTTP/1.1 request messages.</th>
+                        </tr>
+                        <tr>
+                            <td>User-agent:</td>
+                            <td>Used to identify what client is being used to connect to the server. For example, Firefox and Google Chrome would each have different user-agent strings. This can be useful for a server to keep track of statistics about what types of clients are connecting.</td>
+                        </tr>
+                        <tr>
+                            <td>Accept:</td>
+                            <td>The types of media that the client will accept in response to this request. For example text/html, image files, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Accept-Language:</td>
+                            <td>Some websites have support for multiple languages, and users may set in the browser their preferred default language. This part of the HTTP header communicates the default language that has been set by the browser, and even secondary language preferences if the primary language is unavailable.</td>
+                        </tr>
+                        <tr>
+                            <td>Accept-Encoding:</td>
+                            <td>Specifies the type of HTTP encoding that the client can accept. HTTP encoding can be utilized by web servers to compress files before sending them which can reduce bandwidth usage.</td>
+                        </tr>
+                        <tr>
+                            <td>Referer:</td>
+                            <td>A link from the previous webpage from which a link to the target webpage was followed. This can provide useful statistics on how users are navigating a website internally and what external websites are sending web traffic your way.</td>
+                        </tr>
+                        <tr>
+                            <td>Connection:</td>
+                            <td>Specifies whether or not the connection should be kept alive. Keeping a connection alive assists in not having to do an HTTP handshake for every new file that is being requested from the server.</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
