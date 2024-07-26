@@ -6,17 +6,22 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- The header is the entire nav-bar - Title and linking elements -->
         <header class="header">
 
+            <!-- Contains the title text on the left side of the nav bar, links back to index.html -->
             <div class="title-text">
                 <h1><a href="index.html">HTTP: HOW AND WHY</a></h1>
             </div>
 
+            <!-- This div contains the links on the right hand side of the nav bar -->
             <div class="navigation">
 
+                <!-- Checkbox for hamburger menu functionality -->
                 <input type="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
 
+                <!-- List containing all the nav-bar items -->
                 <ul class="menu">
                     <li><a href="http.html">HTTP &amp; HTTPS?</a></li>
                     <li><a href="download.html">DOWNLOAD?</a></li>
@@ -25,6 +30,8 @@
                 </ul>
             </div>
         </header>
+
+        <!-- Contains the main body of the page and all content -->
         <div class="wrapper">
             <div class="main-body">
                 <!-- Image header and overlaid text -->
@@ -35,7 +42,7 @@
                         <img src="images/cropped_requests400.jpg">
                     </picture>
                     <div class="image-header-text-container">
-                        <h2 class>What is a request?</h2>
+                        <h2 class>What is a <span class="keyword">request</span>?</h2>
                     </div>
                 </div>
                 <div class="content">

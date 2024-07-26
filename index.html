@@ -6,17 +6,22 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- The header is the entire nav-bar - Title and linking elements -->
         <header class="header">
 
+            <!-- Contains the title text on the left side of the nav bar, links back to index.html -->
             <div class="title-text">
                 <h1><a href="index.html">HTTP: HOW AND WHY</a></h1>
             </div>
 
+            <!-- This div contains the links on the right hand side of the nav bar -->
             <div class="navigation">
 
+                <!-- Checkbox for hamburger menu functionality -->
                 <input type="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
 
+                <!-- List containing all the nav-bar items -->
                 <ul class="menu">
                     <li><a href="http.html">HTTP &amp; HTTPS?</a></li>
                     <li><a href="download.html">DOWNLOAD?</a></li>
@@ -25,14 +30,19 @@
                 </ul>
             </div>
         </header>
+
+        <!-- Contains the main body of the page and all content -->
         <div class="wrapper">
             <div class="main-body">
                 <div class="content">
                     <h1>HTTP: HOW AND WHY</h1>
                     <p>Follow one of the links to start learning about the HTTP protocol.</p>
                 </div>
+                
+                <!-- Four grid items are housed in this grid-container div. -->
                 <div class="grid-container">
 
+                    <!-- Each grid item contains an imaged with an overlaid div containing a header with the title of the linked page. -->
                     <div class="grid-item-1">
                         <a href="http.html">
                             <picture>
@@ -40,13 +50,12 @@
                                 <source media="(min-width:800px)" srcset="images/cropped_https_orange700.jpg">
                                 <img src="images/cropped_https_orange400.jpg">
                             </picture>
-                            <div class="index-header-text-container">
-                                <h2 class>What is HTTP and HTTPS?</h2>
+                            <div class="image-header-text-container">
+                                <h2 class="index-page-header">What is <span class="keyword">HTTP</span> and <span class="keyword">HTTPS</span>?</h2>
                             </div>
                         </a>
                     </div>
                 
-
                     <div class="grid-item-2">
                         <a href="download.html">
                             <picture>
@@ -54,8 +63,8 @@
                                 <source media="(min-width:800px)" srcset="images/cropped_download700.jpg">
                                 <img src="images/cropped_download400.jpg">
                             </picture>
-                            <div class="index-header-text-container">
-                                <h2 class>How is a webpage downloaded?</h2>
+                            <div class="image-header-text-container">
+                                <h2 class="index-page-header">How is a webpage <span class="keyword">downloaded</span>?</h2>
                             </div>
                         </a>
                     </div>
@@ -67,8 +76,8 @@
                                 <source media="(min-width:800px)" srcset="images/cropped_requests700.jpg">
                                 <img src="images/cropped_requests400.jpg">
                             </picture>
-                            <div class="index-header-text-container">
-                                <h2 class>What is a request?</h2>
+                            <div class="image-header-text-container">
+                                <h2 class="index-page-header">What is a <span class="keyword">request</span>?</h2>
                             </div>
                         </a>    
                     </div>
@@ -80,11 +89,12 @@
                                 <source media="(min-width:800px)" srcset="images/cropped_getpost700.jpg">
                                 <img src="images/cropped_getpost400.jpg">
                             </picture>
-                            <div class="index-header-text-container">
-                                <h2 class>When to use GET and POST?</h2>
+                            <div class="image-header-text-container">
+                                <h2 class="index-page-header">When to use <span class="keyword">GET</span> and <span class="keyword">POST</span>?</h2>
                             </div>
                         </a>
                     </div>
+                    
                 </div>
             </div>
         </div>

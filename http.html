@@ -6,17 +6,22 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- The header is the entire nav-bar - Title and linking elements -->
         <header class="header">
 
+            <!-- Contains the title text on the left side of the nav bar, links back to index.html -->
             <div class="title-text">
                 <h1><a href="index.html">HTTP: HOW AND WHY</a></h1>
             </div>
 
+            <!-- This div contains the links on the right hand side of the nav bar -->
             <div class="navigation">
 
+                <!-- Checkbox for hamburger menu functionality -->
                 <input type="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
 
+                <!-- List containing all the nav-bar items -->
                 <ul class="menu">
                     <li><a href="http.html">HTTP &amp; HTTPS?</a></li>
                     <li><a href="download.html">DOWNLOAD?</a></li>
@@ -25,8 +30,11 @@
                 </ul>
             </div>
         </header>
+
+        <!-- Contains the main body of the page and all content -->
         <div class="wrapper">
             <div class="main-body">
+
                 <!-- Image header and overlaid text -->
                 <div class="image-header">
                     <picture>
@@ -35,21 +43,27 @@
                         <img src="images/cropped_https_orange400.jpg">
                     </picture>
                     <div class="image-header-text-container">
-                        <h2 class>What is HTTP and HTTPS?</h2>
+                        <h2 class>What is <span class="keyword">HTTP</span> and <span class="keyword">HTTPS?</span></h2>
                     </div>
                 </div>
+
+                <!-- The text based content of the page -->
                 <div class="content">
+
                     <p>The HTTP or Hypertext Transfer Protocol lays the very foundation of the web as we know it, 
                         enabling billions of users from across the globe access to content to millions of websites. 
                         Specifically, it is used to load web pages through the use of hypertext links. </p>
+                    
                     <h3>Request-Response</h3>
                     <p>HTTP(S) is a request-response protocol, meaning that users will send a request to the server which will then provide a response. 
                         HTTP has many different types of <a href="request.html">requests</a> that can be used to perform specific actions.</p>
+                    
                     <h3>Application layer</h3>
                     <p>HTTP is an application layer protocol and functions on top of the other layers in the networking protocol stack. 
                         The HTTP protocol is not responsible for finding a path to and from the destination server, only for making the desired request. 
                         The to and from is handled by other protocols further down the network stack.</p>
-                    <h3>HTTP vs. HTTPS</h3>
+                    
+                        <h3>HTTP vs. HTTPS</h3>
                     <p>HTTPS adds an extra layer of security to the HTTP protocol. By default, HTTP sends messages in plain text that could 
                         potentially be intercepted and read by anyone along the path the packet takes. This could enable bad actors to 
                         easily gain access to sensitive information such as passwords or private communications. HTTPS takes steps to prevent this by 
@@ -57,6 +71,7 @@
                         HTTPS security (although the certificates used are still named SSL certificates).</p>
                     <p>TLS uses public key cryptography which enables both the client and server to agree on a shared secret key that is used to 
                         encrypt communications so they are unable to be read by any malicious parties.</p>
+
                     <h3>How TLS works:</h3>
                     <ul>
                         <li>Client sends an TLS connection request which contains the TLS version the client wants to use.</li>

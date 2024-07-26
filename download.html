@@ -6,17 +6,22 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- The header is the entire nav-bar - Title and linking elements -->
         <header class="header">
 
+            <!-- Contains the title text on the left side of the nav bar, links back to index.html -->
             <div class="title-text">
                 <h1><a href="index.html">HTTP: HOW AND WHY</a></h1>
             </div>
 
+            <!-- This div contains the links on the right hand side of the nav bar -->
             <div class="navigation">
 
+                <!-- Checkbox for hamburger menu functionality -->
                 <input type="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
 
+                <!-- List containing all the nav-bar items -->
                 <ul class="menu">
                     <li><a href="http.html">HTTP &amp; HTTPS?</a></li>
                     <li><a href="download.html">DOWNLOAD?</a></li>
@@ -25,27 +30,86 @@
                 </ul>
             </div>
         </header>
+
         <!-- Contains the main body of the page and all content -->
         <div class="wrapper">
             <div class="main-body">
                 <!-- Image header and overlaid text -->
                 <div class="image-header">
+
                     <picture>
                         <source media="(min-width:1100px)" srcset="images/cropped_download.jpg">
                         <source media="(min-width:800px)" srcset="images/cropped_download700.jpg">
                         <img src="images/cropped_download400.jpg">
                     </picture>
+
                     <div class="image-header-text-container">
-                        <h2 class>How is a webpage downloaded?</h2>
+                        <h2 class>How is a webpage <span class="keyword">downloaded</span>?</h2>
                     </div>
                 </div>
+
+                <!-- The main content that will be displayed in the body of the page -->
                 <div class="content">
-                    <h3>This is some content</h3>
-                    <p>Supplied directly pleasant we ignorant ecstatic of jointure so if. These spoke house of we. Ask put yet excuse person see change. Do inhabiting no stimulated unpleasing of admiration he. Enquire explain another he in brandon enjoyed be service. Given mrs she first china. Table party no or trees an while it since. On oh celebrated at be announcing dissimilar insipidity. Ham marked engage oppose cousin ask add yet. </p>
-                    <h4>Another paragraph below</h4>
-                    <p>Oh acceptance apartments up sympathize astonished delightful. Waiting him new lasting towards. Continuing melancholy especially so to. Me unpleasing impossible in attachment announcing so astonished. What ask leaf may nor upon door. Tended remain my do stairs. Oh smiling amiable am so visited cordial in offices hearted. </p>
-                    <h4>A final paragraph</h4>
-                    <p>By spite about do of do allow blush. Additions in conveying or collected objection in. Suffer few desire wonder her object hardly nearer. Abroad no chatty others my silent an. Fat way appear denote who wholly narrow gay settle. Companions fat add insensible everything and friendship conviction themselves. Theirs months ten had add narrow own. </p>
+
+                    <p>Here we will explore how a webpage is downloaded and the various requests that are send by a browser in order to transfer the required files to the clients machine.</p>
+
+                    <!-- Links this image to that it opens a new tab which displays the largest version of the image on click -->
+                    <a href="images/networkwide.png" target="_blank">
+                        <picture class="in-article-image">
+                            <source media="(min-width:1100px)" srcset="images/networkwide.png">
+                            <source media="(min-width:800px)" srcset="images/networkmid.png">
+                            <img src="images/networknarrow.png">
+                        </picture>
+                    </a>
+
+                    <p>The above image shows all the HTTP requests that were made while loading this <a href="https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/">webpage</a>. As we can see, all the requests are of the type GET, this is because the client is attempting to download all the resources required to display the webpage. Let's break down what exactly is being downloaded here.</p>
+                    <p>Firstly we will see what all the different columns mean in the table below:</p>
+
+                    <table>
+                        <tr>
+                            <th>Column</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Status refers to the HTTP response sent by the server. As we can see all of the responses here were 200 or OK. This means that the file was successfully requested.</td>
+                        </tr>
+                        <tr>
+                            <td>Method</td>
+                            <td>Refers to the method being used by the HTTP request. All the methods here were GET.</td>
+                        </tr>
+                        <tr>
+                            <td>Domain</td>
+                            <td>The target domain of the request. As we can see most of the requests were sent to the firefox-source-docs.mozilla domain, which is the host of the website.</td>
+                        </tr>
+                        <tr>
+                            <td>File</td>
+                            <td>The specific URL to the file being requested.</td>
+                        </tr>
+                        <tr>
+                            <td>Initiator</td>
+                            <td>This is the object or process that initiated the request.</td>
+                        </tr>
+                        <tr>
+                            <td>Type</td>
+                            <td>The type of document being requested</td>
+                        </tr>
+                        <tr>
+                            <td>Transferred</td>
+                            <td>The total amount of data that was transferred for this request.</td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>The size of the target file.</td>
+                        </tr>
+                    </table>
+
+                    <h2>The sequence of requests:</h2>
+                    <p>The first request we see is for the .html file that comprises the structure of the webpage. This is loaded first because it contains links to all of the other files that are required to load the webpage. Once the client has this, then it will read the html file and send further requests to gather the additional content.</p>
+                    <p>The next series of requests shown above are downloading the CSS required to style the page. As we can see this page is using 6 separate stylesheets to format the content contained within the html file. Each one of these files requires are separate HTTP request from the client in order to download it.</p>
+                    <p>Following the stylesheets, the next objects that were loaded were the javascript files. These are responsible for website functionality. It is likely that the javascript files are split up based on what their individual purposes are.</p>
+                    <p>Next up are the image files. Each image file has to be individually requested by the client. We can see that two filetypes fall under the umbrella of image files: .svg, and .png. There exist other file types which fall under this category such as .gif and .jpg</p>
+                    <p>The final file we see down the very bottom is actually a font file. It is possible for websites to use custom fonts or even to link to externally hosted fonts using services such as Google Fonts. Clients will download and temporarily store these fonts locally in order to display them on the webpage.</p>
                 </div>
             </div>
         </div>
