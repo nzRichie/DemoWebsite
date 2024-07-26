@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>What is a request?</title>
         <meta charset="UTF-8">
@@ -34,25 +34,31 @@
         <!-- Contains the main body of the page and all content -->
         <div class="wrapper">
             <div class="main-body">
+
                 <!-- Image header and overlaid text -->
                 <div class="image-header">
                     <picture>
                         <source media="(min-width:1100px)" srcset="images/cropped_requests.jpg">
                         <source media="(min-width:800px)" srcset="images/cropped_requests700.jpg">
-                        <img src="images/cropped_requests400.jpg">
+                        <img src="images/cropped_requests400.jpg" alt="">
                     </picture>
                     <div class="image-header-text-container">
                         <h2 class>What is a <span class="keyword">request</span>?</h2>
                     </div>
                 </div>
+                
+                <!-- The text based content of the page -->
                 <div class="content">
-                    <h2>HTTP Requests</h2>
+                    
                     <p>HTTP Requests are the messages that are sent from the client to the server. These are used to perform various actions such as requesting content from the server, or updating content on the server.</p>
                     <p>Requests all have headers, which are used to convey information to the server such as the HTTP method, information about the client being used to connect, what type of responses are accepted by the client, and many more. The first part of the header will look something like this:</p>
                     <p>GET /index.html HTTP/1.1</p>
                     <p>GET refers to the HTTP method the client is using, /index.html refers to the file being requested by the client, and HTTP/1.1 refers to the version of HTTP being used in the request.</p>
+                    
                     <h2>Types of HTTP methods:</h2>
                     <p>Below is a table containing all of the different types of HTTP methods and what they're used for.</p>
+
+                    <!-- A table showing descriptions of different HTTP methods -->
                     <table>
                         <tr>
                             <th>Request method</th>
@@ -95,9 +101,12 @@
                             <td>Applies partial modifications to a target resource.</td>
                         </tr>
                     </table>
+                    
                     <h2>What else is in an HTTP header?</h2>
                     <p>The rest of the HTTP header content consists of key, value pairs, the key and the value are separated by a colon while the pairs are separated by a carriage return and a line feed (a new line).</p>
                     <p>Below are some examples of HTTP header fields and what they're used for.</p>
+
+                    <!-- A table showing some header properties -->
                     <table>
                         <tr>
                             <th>Key</th>
@@ -132,6 +141,7 @@
                             <td>Specifies whether or not the connection should be kept alive. Keeping a connection alive assists in not having to do an HTTP handshake for every new file that is being requested from the server.</td>
                         </tr>
                     </table>
+
                 </div>
             </div>
         </div>

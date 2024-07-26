@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>How is a webpage downloaded?</title>
         <meta charset="UTF-8">
@@ -34,13 +34,14 @@
         <!-- Contains the main body of the page and all content -->
         <div class="wrapper">
             <div class="main-body">
+
                 <!-- Image header and overlaid text -->
                 <div class="image-header">
 
                     <picture>
                         <source media="(min-width:1100px)" srcset="images/cropped_download.jpg">
                         <source media="(min-width:800px)" srcset="images/cropped_download700.jpg">
-                        <img src="images/cropped_download400.jpg">
+                        <img src="images/cropped_download400.jpg" alt="">
                     </picture>
 
                     <div class="image-header-text-container">
@@ -58,13 +59,14 @@
                         <picture class="in-article-image">
                             <source media="(min-width:1100px)" srcset="images/networkwide.png">
                             <source media="(min-width:800px)" srcset="images/networkmid.png">
-                            <img src="images/networknarrow.png">
+                            <img src="images/networknarrow.png" alt="A screenshot of firefox's network analysis feature displaying a series of requests made to a website.">
                         </picture>
                     </a>
 
                     <p>The above image shows all the HTTP requests that were made while loading this <a href="https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/">webpage</a>. As we can see, all the requests are of the type GET, this is because the client is attempting to download all the resources required to display the webpage. Let's break down what exactly is being downloaded here.</p>
                     <p>Firstly we will see what all the different columns mean in the table below:</p>
 
+                    <!-- Table showing descriptions of the various columns in the network analysis tool -->
                     <table>
                         <tr>
                             <th>Column</th>
@@ -110,6 +112,7 @@
                     <p>Following the stylesheets, the next objects that were loaded were the javascript files. These are responsible for website functionality. It is likely that the javascript files are split up based on what their individual purposes are.</p>
                     <p>Next up are the image files. Each image file has to be individually requested by the client. We can see that two filetypes fall under the umbrella of image files: .svg, and .png. There exist other file types which fall under this category such as .gif and .jpg</p>
                     <p>The final file we see down the very bottom is actually a font file. It is possible for websites to use custom fonts or even to link to externally hosted fonts using services such as Google Fonts. Clients will download and temporarily store these fonts locally in order to display them on the webpage.</p>
+                
                 </div>
             </div>
         </div>

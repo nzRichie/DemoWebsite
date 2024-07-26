@@ -1,11 +1,4 @@
 /*
-
-Name: Richard Larsen
-ID: 1048543
-
-References:
-CSS Hamburger menu functionality: https://www.youtube.com/watch?v=XM7sEpl0f7c
-
 Theme colors:
 
 0a0b14
@@ -85,7 +78,7 @@ body {
 }
 
 .menu li a:hover {
-    box-shadow: 0 -5px 0px #FF7844 inset;
+    box-shadow: 0 -5px 0 #FF7844 inset;
     padding: 35px 25px 45px 25px;
 }
 
@@ -190,15 +183,11 @@ body {
     }
 }
 
+/* Styling for the main body and the glowing border */
+
 .wrapper {
     width: 100%;
     padding: 50px;
-}
-
-@property --gradient-angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
 }
 
 .main-body {
@@ -207,6 +196,12 @@ body {
     background: #1B1F3A;
     border-radius: 0.5rem;
     position: relative;
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
 .main-body::before,
@@ -257,7 +252,7 @@ body {
 }
 
 .content p a {
-    text-decoration: 0;
+    text-decoration: none;
     color: #FF7844;
 }
 
@@ -274,7 +269,7 @@ body {
     object-fit: cover;
 }
 
-/* Styling for the table on the request.html page */
+/* Styling for the tables */
 table {
     table-layout: fixed;
     width: 100%;
@@ -294,6 +289,7 @@ th:nth-child(1) {
     width: 25%;
 }
 
+/* Styling for the grid items on index.html */
 h2 {
     padding: 20px;
 }
@@ -353,10 +349,11 @@ h2 {
 }
 
 .index-page-header {
-    padding: 0px;
+    padding: 0;
     font-size: 18px;
 }
 
+/* Creates a wiggle effect when mouse-over the linking elements on index.html */
 @keyframes wiggle {
     0% {transform: rotate(0deg); }
     5% {transform: rotate(0deg); }
@@ -365,10 +362,12 @@ h2 {
     20% {transform: rotate(0deg);}
 }
 
+/* Limits the width of the in-article-image in downloads.html */
 .in-article-image img {
     max-width: 100%;
 }
 
+/* Used to highlight some key words in the header images */
 .keyword {
     color: #FF7844;
 }
